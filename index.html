@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width"
+        />
+        <title>第1弾</title>
+        <style>
+/* CSS */
+
+/* 「あぜびー！」の装飾 */
+#azebii {
+    background-color: #600; /* 背景色 */
+    color: #F99; /* 文字色 */
+    padding: 1em; /* 文字の上下左右に1文字分の幅を持たせる*/
+    border-radius: 1em; /* 1文字分の角丸 */
+    position: fixed; /* 位置を絶対指定 */
+    top: 1cm; /* 縦位置は画面上から1cm */
+}
+
+/* 全体の背景色と文字色 */
+body {
+    background-color: #FCC;
+    color: #300;
+}
+        </style>
+    </head>
+    <body>
+        <span id="azebii">あぜびー！</span>
+        <script>
+// JavaScript
+
+// 画面左からの位置が何cmかを記憶する変数を作成
+let x = 1.0
+// 位置の指定先である「あぜびー！」と書かれた
+// HTML要素を記憶した定数を作成
+const azebii = document.querySelector('#azebii')
+
+// 「アニメ」1フレームを実行する関数を作成
+const anime = () => {
+    // 自分自身「アニメ」を1フレーム後に再実行
+    requestAnimationFrame(anime)
+    // 画面左からの位置を0.05cm足す
+    x = x + 0.05
+    // 5cmを超えたら1cmに戻す
+    if (x > 5.0) x = 1.0
+    // 画面左からの位置のCSSに実際に書き込み
+    azebii.style.left = x + 'cm'
+}
+
+// 「アニメ」関数を初回実行
+anime()
+        </script>
+    </body>
+</html>
+
+
+
