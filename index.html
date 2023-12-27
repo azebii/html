@@ -6,56 +6,32 @@
             name="viewport"
             content="width=device-width"
         />
-        <title>第1弾</title>
+        <title>TOP | HTML & CSS & JS 1ファイルサンプル</title>
         <style>
-/* CSS */
+            /* CSS */
 
-/* 「あぜびー！」の装飾 */
-#azebii {
-    background-color: #600; /* 背景色 */
-    color: #F99; /* 文字色 */
-    padding: 1em; /* 文字の上下左右に1文字分の幅を持たせる*/
-    border-radius: 1em; /* 1文字分の角丸 */
-    font-family: sans-serif; /* フォントはゴシック体 */
-    position: fixed; /* 位置を絶対指定 */
-    top: 1cm; /* 縦位置は画面上から1cm */
-}
+            /* リンク（アンカー） */
+            a {
+                background-color: #F66; /* 背景色 */
+                color: #900; /* 文字色 */
+                border-radius: 0.5em; /* 0.5文字分の角丸 */
+                text-decoration: none; /* 下線を無くす */
+            }
 
-/* 全体の背景色と文字色 */
-body {
-    background-color: #FCC;
-    color: #300;
-}
+            /* 全体 */
+            body {
+                background-color: #FCC; /* 背景色 */
+                color: #300; /* 文字色 */
+                font-family: sans-serif; /* フォントはゴシック体 */
+                font-size: 2svw; /* 画面の幅の2%を文字サイズとする */
+            }
         </style>
     </head>
     <body>
-        <span id="azebii">あぜびー！</span>
-        <script>
-// JavaScript
-
-// 画面左からの位置が何cmかを記憶する変数を作成
-let x = 1.0
-// 位置の指定先である「あぜびー！」と書かれた
-// HTML要素を記憶した定数を作成
-const azebii = document.querySelector('#azebii')
-
-// 「アニメ」1フレームを実行する関数を作成
-const anime = () => {
-    // 自分自身「アニメ」を1フレーム後に再実行
-    requestAnimationFrame(anime)
-    // 画面左からの位置を0.05cm足す
-    x = x + 0.05
-    // 5cmを超えたら1cmに戻す
-    if (x > 5.0) x = 1.0
-    // 画面左からの位置のCSSに実際に書き込み
-    azebii.style.left = x + 'cm'
-}
-
-// 「アニメ」関数を初回実行
-anime()
-        </script>
+        <h1>HTML & CSS & JS 1ファイルサンプル</h1>
+        <ul>
+            <li><a href="./dai1dan.html">第1弾</a></li>
+        </ul>
+        <p><a href="https://github.com/azebii">あぜびー</a>作</p>
     </body>
 </html>
-
-
-
