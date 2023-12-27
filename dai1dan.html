@@ -10,24 +10,28 @@
         <style>
             /* CSS */
 
-            /* 「あぜびー！」の装飾 */
+            /* 「あぜびー！」 */
             #azebii {
                 background-color: #900; /* 背景色 */
                 color: #F66; /* 文字色 */
                 padding: 1em; /* 文字の上下左右に1文字分の幅を持たせる */
                 border-radius: 1em; /* 1文字分の角丸 */
                 position: fixed; /* 位置を絶対指定 */
-                top: 1cm; /* 縦位置は画面上から1cm */
+                top: 8em; /* 縦位置は画面上から8文字分 */
+            }
+            
+            /* タイトル */
+            h1 {
+                font-size: 2em; /* 周りの2文字分を文字サイズとする */
             }
 
             /* リンク（アンカー） */
             a {
                 background-color: #F66; /* 背景色 */
                 color: #900; /* 文字色 */
+                padding: 0.5em; /* 内部の余白は1文字分 */
                 text-decoration: none; /* 下線を無くす */
                 border-radius: 0.5em; /* 0.5文字分の角丸 */
-                position: fixed; /* 位置を絶対指定 */
-                top: 4cm; /* 縦位置は画面上から1cm */
             }
 
             /* 全体 */
@@ -36,12 +40,24 @@
                 color: #300; /* 文字色 */
                 font-family: sans-serif; /* フォントはゴシック体 */
                 font-size: 2svw; /* 画面の幅の2%を文字サイズとする */
+                padding: 1em; /* 内部の余白は1文字分 */
+            }
+            
+            /* 全ての要素 */
+            * {
+                margin: 0; /* 周りの余白なし */
+                padding: 0; /* 内部の余白なし */
+                line-height: 2em; /* 行の高さを2文字分とする */
             }
         </style>
     </head>
     <body>
+        <h1>第１弾</h1>
+        <p>
+            <a href="https://github.com/azebii/html/blob/main/dai1dan.html">このページのコード</a>
+            <a href="./index.html">トップ</a>
+        </p>
         <span id="azebii">あぜびー！</span>
-        <p><a href="./index.html">もどる</a></p>
         <script>
             // JavaScript
 
@@ -60,7 +76,7 @@
                 // 5cmを超えたら1cmに戻す
                 if (x > 5.0) x = 1.0
                 // 画面左からの位置のCSSに実際に書き込み
-                azebii.style.left = x + 'cm'
+                azebii.style.left = x + 'em'
             }
 
             // 「アニメ」関数を初回実行

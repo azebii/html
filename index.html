@@ -6,14 +6,25 @@
             name="viewport"
             content="width=device-width"
         />
-        <title>TOP | HTML & CSS & JS 1ファイルサンプル</title>
+        <title>トップ | HTML 1ファイルサンプル</title>
         <style>
             /* CSS */
+            
+            /* タイトル */
+            h1 {
+                font-size: 2em; /* 周りの2文字分を文字サイズとする */
+            }
+            
+            /* リストの各項目 */
+            li {
+                margin: 1em 0 1em 2em; /* 周りの余白は上下1文字分、左2文字分 */
+            }
 
             /* リンク（アンカー） */
             a {
                 background-color: #F66; /* 背景色 */
                 color: #900; /* 文字色 */
+                padding: 0.5em; /* 内部の余白は1文字分 */
                 border-radius: 0.5em; /* 0.5文字分の角丸 */
                 text-decoration: none; /* 下線を無くす */
             }
@@ -24,14 +35,25 @@
                 color: #300; /* 文字色 */
                 font-family: sans-serif; /* フォントはゴシック体 */
                 font-size: 2svw; /* 画面の幅の2%を文字サイズとする */
+                padding: 1em; /* 内部の余白は1文字分 */
+            }
+            
+            /* 全ての要素 */
+            * {
+                margin: 0; /* 周りの余白なし */
+                padding: 0; /* 内部の余白なし */
+                line-height: 2em; /* 行の高さを2文字分とする */
             }
         </style>
     </head>
     <body>
-        <h1>HTML & CSS & JS 1ファイルサンプル</h1>
+        <h1>HTML 1ファイルサンプル</h1>
         <ul>
             <li><a href="./dai1dan.html">第1弾</a></li>
         </ul>
-        <p><a href="https://github.com/azebii">あぜびー</a>作</p>
+        <p>
+            <a href="https://github.com/azebii/html/blob/main/index.html">このページのコード</a>
+            <a href="https://github.com/azebii">あぜびー</a>
+        </p>
     </body>
 </html>
